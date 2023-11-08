@@ -5,7 +5,15 @@
 ## Makefile
 ##
 
-SRC = 		solution.c \
+SRC = 		add_element_at_end.c \
+			add_element_at.c \
+			creation.c \
+			display.c \
+			free.c \
+			get_last_element.c \
+			remove_element_at.c \
+			reverse_list.c \
+			solution.c
 
 OBJ = 		$(SRC:.c=.o)
 
