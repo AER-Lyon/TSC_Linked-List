@@ -5,12 +5,14 @@
 ## Makefile
 ##
 
-SRC = 		display.c \
+SRC = 		free.c \
 			../../solution/creation.c \
+			../../solution/display.c \
 
 SRC_MAIN = 	main.c \
 
 SRC_SOL = 	../../solution/display.c \
+			../../solution/free.c \
 			../../solution/creation.c \
 
 OBJ = 		$(SRC:.c=.o)
@@ -19,7 +21,7 @@ OBJ_MAIN = 	$(SRC_MAIN:.c=.o)
 
 OBJ_SOL = 	$(SRC_SOL:.c=.o)
 
-NAME = 		display
+NAME = 		free
 
 NAME_SOL = 	solution
 
