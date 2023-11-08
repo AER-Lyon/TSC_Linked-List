@@ -5,8 +5,8 @@
 ## Makefile
 ##
 
-SRC = 		creation.c \
-			../solution/display.c \
+SRC = 		display.c \
+			../solution/creation.c \
 
 SRC_MAIN = 	main.c \
 
@@ -19,7 +19,7 @@ OBJ_MAIN = 	$(SRC_MAIN:.c=.o)
 
 OBJ_SOL = 	$(SRC_SOL:.c=.o)
 
-NAME = 		creation
+NAME = 		display
 
 NAME_SOL = 	solution
 
