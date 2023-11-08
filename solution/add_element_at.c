@@ -10,7 +10,7 @@
 void add_element_at(linked_list_t **begin, char *data, int index)
 {
     linked_list_t *elem = *begin;
-    while (index > 1) {
+    while (index > 1 && elem->next != NULL) {
         elem = elem->next;
         index--;
     }
