@@ -6,10 +6,12 @@
 ##
 
 SRC = 		creation.c \
+			../solution/display.c \
 
 SRC_MAIN = 	main.c \
 
-SRC_SOL = 	../solution/solution.c \
+SRC_SOL = 	../solution/display.c \
+			../solution/creation.c \
 
 OBJ = 		$(SRC:.c=.o)
 
@@ -26,21 +28,20 @@ all: 		$(NAME)
 $(NAME): 	$(OBJ) $(OBJ_MAIN)
 		@gcc -o $(NAME) $(OBJ) $(OBJ_MAIN) -Iinclude
 		@echo "------------------------"
-		@echo "Got :" && ./$(NAME)
+		@echo "Got :" && ./$(NAME) 1 2 3 4 5 6 7 8 9 10
 		@echo "------------------------"
 		@./$(NAME) > $(NAME).txt
-		@make clean
 
 $(NAME_SOL): 	$(OBJ_SOL) $(OBJ_MAIN)
 		@gcc -o $(NAME_SOL) $(OBJ_SOL) $(OBJ_MAIN) -Iinclude
 		@echo "------------------------"
-		@echo "Expected :" && ./$(NAME_SOL)
+		@echo "Expected :" && ./$(NAME_SOL) 1 2 3 4 5 6 7 8 9 10
 		@echo "------------------------"
 		@./$(NAME_SOL) > $(NAME_SOL).txt
-		@make clean
 
 test : 		$(NAME) $(NAME_SOL)
 		@sh ../diff.sh $(NAME).txt $(NAME_SOL).txt
+		@make fclean
 
 clean:
 		@rm -f $(OBJ) $(OBJ_SOL)

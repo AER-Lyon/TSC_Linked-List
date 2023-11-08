@@ -10,8 +10,5 @@
 int main(int argc, char *argv[])
 {
     linked_list_t *list = create_linked_list(argc, argv);
-    while (list != NULL) {
-        printf("%s\n", list->data);
-        list = list->next;
-    }
+    display_list(list);
 }
