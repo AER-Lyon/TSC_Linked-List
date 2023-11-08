@@ -11,4 +11,6 @@ int main(int argc, char *argv[])
 {
     linked_list_t *list = create_linked_list(argc, argv);
     display_list(list);
+    free_list(list);
+    return (0);
 }

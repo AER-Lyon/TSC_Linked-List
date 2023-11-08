@@ -5,13 +5,15 @@
 ## Makefile
 ##
 
-SRC = 		display.c \
+SRC = 		get_last_element.c \
 			../../solution/creation.c \
+			../../solution/display.c \
 			../../solution/free.c \
 
 SRC_MAIN = 	main.c \
 
 SRC_SOL = 	../../solution/display.c \
+			../../solution/get_last_element.c \
 			../../solution/creation.c \
 			../../solution/free.c \
 
@@ -21,7 +23,7 @@ OBJ_MAIN = 	$(SRC_MAIN:.c=.o)
 
 OBJ_SOL = 	$(SRC_SOL:.c=.o)
 
-NAME = 		display
+NAME = 		get_last_element
 
 NAME_SOL = 	solution
 

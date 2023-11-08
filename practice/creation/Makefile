@@ -12,6 +12,7 @@ SRC_MAIN = 	main.c \
 
 SRC_SOL = 	../../solution/display.c \
 			../../solution/creation.c \
+			../../solution/free.c \
 
 OBJ = 		$(SRC:.c=.o)
 

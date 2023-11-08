@@ -10,7 +10,9 @@
 int main(int argc, char *argv[])
 {
     linked_list_t *list = create_linked_list(argc, argv);
-    display_list(list);
+    linked_list_t *last = get_last_element(list);
+    if (last)
+        printf("%s\n", get_last_element(list)->data);
     free_list(list);
     return (0);
 }
