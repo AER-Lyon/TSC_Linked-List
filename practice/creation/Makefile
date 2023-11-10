@@ -7,6 +7,7 @@
 
 SRC = 		creation.c \
 			../../solution/display.c \
+			../../solution/free.c \
 
 SRC_MAIN = 	main.c \
 
