@@ -9,8 +9,9 @@
 
 void display_list(linked_list_t *first)
 {
-    while (first != NULL) {
-        printf("%s\n", first->data);
-        first = first->next;
+    linked_list_t *tmp = first;
+    while (tmp != NULL) {
+        printf("%s\n", tmp->data);
+        tmp = tmp->next;
     }
 }
