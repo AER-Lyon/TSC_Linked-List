@@ -35,14 +35,14 @@ $(NAME): 	$(OBJ) $(OBJ_MAIN)
 		@echo "------------------------"
 		@echo "Got :" && ./$(NAME) 1 2 3 4 5 6 7 8 9 10
 		@echo "------------------------"
-		@./$(NAME) > $(NAME).txt
+		@./$(NAME) 1 2 3 4 5 6 7 8 9 10 > $(NAME).txt
 
 $(NAME_SOL): 	$(OBJ_SOL) $(OBJ_MAIN)
 		@gcc -o $(NAME_SOL) $(OBJ_SOL) $(OBJ_MAIN) -Iinclude
 		@echo "------------------------"
 		@echo "Expected :" && ./$(NAME_SOL) 1 2 3 4 5 6 7 8 9 10
 		@echo "------------------------"
-		@./$(NAME_SOL) > $(NAME_SOL).txt
+		@./$(NAME_SOL) 1 2 3 4 5 6 7 8 9 10 > $(NAME_SOL).txt
 
 test : 		$(NAME) $(NAME_SOL)
 		@sh ../../diff.sh $(NAME).txt $(NAME_SOL).txt
